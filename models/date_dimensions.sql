@@ -16,7 +16,7 @@ DAYOFWEEK(TO_TIMESTAMP(STARTED_AT)) AS DAYOFWEEK,
 
 
 FROM 
-{{ source('demo', 'bike') }}
+{{ ref('stg_bike') }}
 where STARTED_AT !='started_at'
 )
 
